@@ -55,6 +55,9 @@ const std::string EH_LABEL = snemo::datamodel::data_info::default_event_header_l
 // simulated stuff
 const std::string SD_LABEL = snemo::datamodel::data_info::default_simulated_data_label();
 
+// simulated signal stuff
+const std::string SSD_LABEL = snemo::datamodel::data_info::default_simulated_signal_data_label();
+
 // calibrated stuff
 const std::string CD_LABEL = snemo::datamodel::data_info::default_calibrated_data_label();
 

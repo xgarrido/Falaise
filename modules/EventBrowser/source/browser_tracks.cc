@@ -238,6 +238,7 @@ void browser_tracks::update() {
 
   this->_update_event_header();
   this->_update_simulated_data();
+  this->_update_simulated_signal_data();
   this->_update_calibrated_data();
   this->_update_tracker_clustering_data();
   this->_update_tracker_trajectory_data();
@@ -622,6 +623,19 @@ void browser_tracks::_update_simulated_data() {
     }  // end of SHOW_MC_TRACKER_HITS
   }    // end of SHOW_MC_HITS
 
+  return;
+}
+
+  void browser_tracks::_update_simulated_signal_data() {
+  // const options_manager &options_mgr = options_manager::get_instance();
+
+  // Grab event and other resources. Here nothing is constant
+  // since properties will be modified here and used later
+  // through 'checking' and 'double_clicking' actions:
+  io::event_record &event = _server_->grab_event();
+
+  // 'simulated_signal_data' availability:
+  if (!event.has(io::SSD_LABEL)) return;
   return;
 }
 
